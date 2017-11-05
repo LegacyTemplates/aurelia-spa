@@ -15,9 +15,9 @@ module.exports = (env) => {
           HtmlWebpackPlugin = require('html-webpack-plugin'),
           AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin'),
           CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin,
-          Clean = require('clean-webpack-plugin'),
-          AureliaWebPackPlugin = require('aurelia-webpack-plugin');
-
+          Clean = require('clean-webpack-plugin');
+    const { AureliaPlugin } = require("aurelia-webpack-plugin");
+          
     const postcssLoader = {
         loader: 'postcss-loader',
         options: { plugins: [require('precss'), require('autoprefixer')] }
@@ -52,6 +52,10 @@ module.exports = (env) => {
                 '.jsx',
                 '.ts',
                 '.tsx'
+            ],
+            modules: [
+                root('src'), 
+                'node_modules'
             ]
         },
     
@@ -93,12 +97,12 @@ module.exports = (env) => {
         plugins: [
             new webpack.DefinePlugin({ 'process.env.NODE_ENV': isDev ? '"development"' : '"production"' }),
             new webpack.WatchIgnorePlugin([root("wwwroot")]),
-            new AureliaWebPackPlugin(),
             ...when(!isTest, [
                 new webpack.DllReferencePlugin({
                     context: __dirname,
                     manifest: require('./wwwroot/dist/vendor-manifest.json')
                 }),
+                new AureliaPlugin(),
                 new HtmlWebpackPlugin({
                     template: 'index.template.ejs',
                     filename: '../index.html',

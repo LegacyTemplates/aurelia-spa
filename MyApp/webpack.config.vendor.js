@@ -4,13 +4,16 @@ const VENDOR = [
     'bootstrap/dist/css/bootstrap.css',
     'font-awesome/css/font-awesome.css',
     'aurelia-animator-css',
+    'aurelia-bootstrapper',
     'aurelia-event-aggregator',
     'aurelia-framework',
     'aurelia-history-browser',
+    'aurelia-loader-webpack',
     'aurelia-logging-console',
     'aurelia-pal-browser',
     'aurelia-polyfills',
     'aurelia-router',
+    'aurelia-templating',
     'aurelia-templating-binding',
     'aurelia-templating-router',
     'aurelia-templating-resources',
@@ -21,8 +24,7 @@ const VENDOR = [
 const path = require('path'),
       webpack = require('webpack'),
       ExtractTextPlugin = require('extract-text-webpack-plugin'),
-      Clean = require('clean-webpack-plugin'),
-      AureliaWebPackPlugin = require('aurelia-webpack-plugin');
+      Clean = require('clean-webpack-plugin');
       
 module.exports = (env) => {
     const extractCSS = new ExtractTextPlugin('vendor.dll.css');
@@ -54,7 +56,6 @@ module.exports = (env) => {
                 path: path.join(__dirname, 'wwwroot', 'dist', '[name]-manifest.json'),
                 name: '[name]_[hash]'
             }),
-            new AureliaWebPackPlugin(),
             new webpack.DefinePlugin({
                 'process.env.NODE_ENV': isDev ? '"development"' : '"production"'
             })
