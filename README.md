@@ -1,6 +1,6 @@
 # aurelia-spa
 
-.NET Core 2.0 Aurelia Webpack App Template
+.NET Core 2.1 Aurelia Webpack App Template
 
 [![](https://raw.githubusercontent.com/ServiceStack/Assets/master/csharp-templates/aurelia-spa.png)](http://aurelia-spa.web-templates.io/)
 
