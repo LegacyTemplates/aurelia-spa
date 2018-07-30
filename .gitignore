@@ -6,6 +6,7 @@
 # Custom
 dist/
 coverage/
+coverage-jest/
 
 # User-specific files
 *.suo
