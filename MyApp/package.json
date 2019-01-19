@@ -41,7 +41,7 @@
     "expose-loader": "^0.7.5",
     "extract-text-webpack-plugin": "next",
     "file-loader": "^1.1.11",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^4.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.8",
     "html-loader": "^0.5.5",
