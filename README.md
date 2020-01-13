@@ -6,9 +6,9 @@
 
 > Browse [source code](https://github.com/NetCoreTemplates/aurelia-spa), view live demo [aurelia-spa.web-templates.io](http://aurelia-spa.web-templates.io) and install with [dotnet-new](http://docs.servicestack.net/dotnet-new):
 
-    $ dotnet tool install -g web
+    $ dotnet tool install -g x
 
-    $ web new aurelia-spa ProjectName
+    $ x new aurelia-spa ProjectName
 
 ## Development workflow
 
