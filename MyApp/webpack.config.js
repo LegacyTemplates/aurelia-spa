@@ -111,8 +111,9 @@ module.exports = ({production, server, extractCss, coverage, analyze} = {}) => (
       filename: production ? '[md5:contenthash:hex:20].css' : '[id].css',
       allChunks: true
     })),
-    ...when(production, new CopyWebpackPlugin([
-      { from: 'static/favicon.ico', to: 'favicon.ico' }])),
+    ...when(production, new CopyWebpackPlugin({
+      patterns: [{ from: 'static/favicon.ico', to: 'favicon.ico' }]
+    })),
     ...when(analyze, new BundleAnalyzerPlugin())
   ]
 });

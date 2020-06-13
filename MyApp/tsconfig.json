@@ -18,7 +18,8 @@
   },
   "exclude": [
     "node_modules",
-    "aurelia_project"
+    "aurelia_project",
+    "wwwroot"
   ],
   "filesGlob": [
     "./src/**/*.ts",
