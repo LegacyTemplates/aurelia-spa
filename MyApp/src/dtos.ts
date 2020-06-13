@@ -1,11 +1,11 @@
 /* Options:
-Date: 2018-07-29 22:12:10
-Version: 5.11
+Date: 2020-06-13 21:10:29
+Version: 5.91
 Tip: To override a DTO option, remove "//" prefix before updating
-BaseUrl: http://localhost:5000
+BaseUrl: https://localhost:5001
 
 //GlobalNamespace: 
-//MakePropertiesOptional: True
+//MakePropertiesOptional: False
 //AddServiceStackTypes: True
 //AddResponseStatus: False
 //AddImplicitVersion: 
@@ -29,6 +29,8 @@ export interface IReturnVoid
 export class HelloResponse
 {
     public result: string;
+
+    public constructor(init?: Partial<HelloResponse>) { (Object as any).assign(this, init); }
 }
 
 // @Route("/hello")
@@ -36,6 +38,8 @@ export class HelloResponse
 export class Hello implements IReturn<HelloResponse>
 {
     public name: string;
+
+    public constructor(init?: Partial<Hello>) { (Object as any).assign(this, init); }
     public createResponse() { return new HelloResponse(); }
     public getTypeName() { return 'Hello'; }
 }
