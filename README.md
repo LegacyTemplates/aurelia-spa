@@ -1,6 +1,6 @@
 # aurelia-spa
 
-.NET Core 5.0 Aurelia CLI App Template
+.NET 5.0 Aurelia CLI App Template
 
 [![](https://raw.githubusercontent.com/ServiceStack/Assets/master/csharp-templates/aurelia-spa.png)](http://aurelia-spa.web-templates.io/)
 
