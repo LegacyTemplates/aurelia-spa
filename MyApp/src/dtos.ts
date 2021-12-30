@@ -1,6 +1,6 @@
 /* Options:
-Date: 2020-06-13 21:10:29
-Version: 5.91
+Date: 2021-12-30 15:02:29
+Version: 5.133
 Tip: To override a DTO option, remove "//" prefix before updating
 BaseUrl: https://localhost:5001
 
@@ -42,5 +42,6 @@ export class Hello implements IReturn<HelloResponse>
     public constructor(init?: Partial<Hello>) { (Object as any).assign(this, init); }
     public createResponse() { return new HelloResponse(); }
     public getTypeName() { return 'Hello'; }
+    public getMethod() { return 'POST'; }
 }
 
