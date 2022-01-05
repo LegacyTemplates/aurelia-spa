@@ -14,7 +14,7 @@
     "test-watch": "nps test.jest.watch"
   },
   "dependencies": {
-    "@servicestack/client": "^1.1.10",
+    "@servicestack/client": "^1.1.12",
     "aurelia-animator-css": "^1.0.4",
     "aurelia-bootstrapper": "^2.3.3",
     "aurelia-polyfills": "^1.3.4",
