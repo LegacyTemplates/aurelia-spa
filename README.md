@@ -8,13 +8,13 @@
 
     $ dotnet tool install -g x
 
-    $ x new aurelia-spa ProjectName
+    $ x new LegacyTemplates/aurelia-spa ProjectName
 
 Alternatively write new project files directly into an empty repository, using the Directory Name as the ProjectName:
 
     $ git clone https://github.com/<User>/<ProjectName>.git
     $ cd <ProjectName>
-    $ x new aurelia-spa
+    $ x new LegacyTemplates/aurelia-spa
 
 ## Development workflow
 
